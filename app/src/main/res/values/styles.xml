@@ -8,10 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- Sin Action Bar, barra colorPrimary -->
-    <style name="colorPrimaryNoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimary</item>
-        <item name="android:windowDisablePreview">true</item>
+    <!-- Splash Style -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_drawable</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
     </style>
+
 
 </resources>
