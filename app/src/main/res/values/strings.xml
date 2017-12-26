@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Agriculturapp</string>
+
+
+
+
+    <!--STRING ACTIVITY REGISTER USER-->
+    <string name="title_productor">Productor</string>
+    <string name="title_comprador">Comprador</string>
+
+
+    <string name="title_selected_options">Seleccione una de las siguientes opciones</string>
+
+
 </resources>
