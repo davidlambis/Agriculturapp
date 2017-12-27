@@ -52,6 +52,8 @@ public class LoginActivity extends AppCompatActivity {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     textViewRegistrarse.setTextColor(getColor(R.color.colorPrimary));
                     startActivity(new Intent(this, RegisterUserActivity.class));
+                }else{
+                    startActivity(new Intent(this, RegisterUserActivity.class));
                 }
                 break;
         }
