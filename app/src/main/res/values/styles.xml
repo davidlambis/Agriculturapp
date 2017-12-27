@@ -21,5 +21,11 @@
     </style>
 
 
+    <style name="NoTransparenceDarkBrown" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/brown</item>
+
+    </style>
+
+
 
 </resources>
