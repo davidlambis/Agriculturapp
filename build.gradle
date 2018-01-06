@@ -36,6 +36,9 @@ ext {
     //Butterknife
     butterknifeVersion = '8.8.1'
 
+    //Spinner
+    library_material_spinner="1.1.0"
+
     //Glide
     glideVersion = '4.4.0'
 }

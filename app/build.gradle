@@ -33,6 +33,9 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
 
+    //Spinner
+    implementation "com.weiwangcn.betterspinner:library-material:$rootProject.ext.library_material_spinner"
+
     //Glide
     implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
     annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.ext.glideVersion"

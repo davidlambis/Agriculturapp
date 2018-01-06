@@ -1,4 +1,4 @@
-package interedes.agriculturapp.activities.register_user;
+package interedes.agriculturapp.activities.register_comprador;
 
 import android.content.Intent;
 import android.os.Build;
@@ -8,56 +8,39 @@ import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
-import interedes.agriculturapp.activities.register_comprador.RegisterCompradorActivity;
 
-public class RegisterUserActivity extends AppCompatActivity {
+public class RegisterCompradorActivity extends AppCompatActivity {
 
-    //UI Elements
-    @BindView(R.id.btnLayoutProductor)
-    LinearLayout btnLayoutProductor;
-    @BindView(R.id.btnLayoutComprador)
-    LinearLayout btnLayoutComprador;
-
-    @BindView(R.id.container)
-    RelativeLayout container;
-    @BindView(R.id.imageViewBackButton)
-    ImageView imageViewBackButton;
-
+    //region UI Elements
+    @BindView(R.id.ivBackButtonRegisterComprador)
+    ImageView ivBackButtonRegisterComprador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_user);
+        setContentView(R.layout.activity_register_comprador);
         ButterKnife.bind(this);
-
     }
 
-
-    //region ON CLICK
-    @OnClick({R.id.btnLayoutProductor, R.id.btnLayoutComprador, R.id.imageViewBackButton})
+    //region On Click
+    @OnClick(R.id.ivBackButtonRegisterComprador)
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.btnLayoutProductor:
-
-                break;
-            case R.id.btnLayoutComprador:
-                startActivity(new Intent(this, RegisterCompradorActivity.class));
-                break;
-            case R.id.imageViewBackButton:
+            case R.id.ivBackButtonRegisterComprador:
                 returnToParentActivity();
+                break;
+            default:
                 break;
         }
     }
     //endregion
 
-    //region METHODS
+    //region Methods
     private void returnToParentActivity() {
         // Obtener intent de la actividad padre
         Intent upIntent = NavUtils.getParentActivityIntent(this);
@@ -88,6 +71,4 @@ public class RegisterUserActivity extends AppCompatActivity {
     }
 
     //endregion
-
-
 }

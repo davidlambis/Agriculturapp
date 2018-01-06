@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="interedes.agriculturapp.activities.register_user.RegisterUserActivity">
+    tools:context="interedes.agriculturapp.activities.register_comprador.RegisterCompradorActivity">
 
-
-    <include layout="@layout/content_register_user"></include>
+    <include layout="@layout/content_register_comprador"></include>
 
 </android.support.design.widget.CoordinatorLayout>

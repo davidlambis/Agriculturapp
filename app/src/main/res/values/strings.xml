@@ -11,6 +11,13 @@
     <string name="title_comprador">Comprador</string>
     <string name="title_help_register">Necesito ayuda para registrarme</string>
 
+    <!-- REGISTRAR COMPRADOR -->
+    <string name="title_register_comprador">¡Te estás registrando como comprador!</string>
+    <string name="edit_text_nombres">Nombres</string>
+    <string name="edit_text_apellidos">Apellidos</string>
+    <string name="edit_text_numero_cedula">Número de Cédula</string>
+    <string name="edit_text_numero_celular">Número de Celular</string>
+    <string name="edit_text_interes_productos">Intereses de Productos</string>
 
 
     <string name="title_selected_options">Seleccione una de las siguientes opciones</string>

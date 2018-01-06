@@ -8,19 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="MiTema.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorAccent
+        </item>
+    </style>
 
-    <style name="MiTema.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- Splash Style -->
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_drawable</item>
-        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
-        </item>
-    </style>
-
-    <!-- Transparent Status Bar Style-->
-    <style name="TransparentStatusBarTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
         </item>
     </style>
@@ -39,11 +40,22 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
+    <!-- Transparent Status Bar Style-->
+    <style name="TransparentStatusBarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
+    </style>
+
+    <!-- Color Accent Status Bar Style -->
+    <style name="ColorAccentStatusBarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorAccent
+        </item>
+    </style>
+
     <!-- Text Appearance Text Input Layout-->
     <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">10sp</item>
-
     </style>
 
 
