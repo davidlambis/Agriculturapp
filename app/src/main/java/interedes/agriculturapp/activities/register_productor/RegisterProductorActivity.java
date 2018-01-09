@@ -1,4 +1,4 @@
-package interedes.agriculturapp.activities.register_user;
+package interedes.agriculturapp.activities.register_productor;
 
 import android.content.Intent;
 import android.os.Build;
@@ -7,59 +7,68 @@ import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
-import interedes.agriculturapp.activities.register_comprador.RegisterCompradorActivity;
-import interedes.agriculturapp.activities.register_productor.RegisterProductorActivity;
 
-public class RegisterUserActivity extends AppCompatActivity {
+public class RegisterProductorActivity extends AppCompatActivity {
 
-    //UI Elements
-    @BindView(R.id.btnLayoutProductor)
-    LinearLayout btnLayoutProductor;
-    @BindView(R.id.btnLayoutComprador)
-    LinearLayout btnLayoutComprador;
-
+    @BindView(R.id.ivBackButtonRegisterComprador)
+    ImageView ivBackButtonRegisterComprador;
+    @BindView(R.id.edtNombres)
+    EditText edtNombres;
+    @BindView(R.id.edtApellidos)
+    EditText edtApellidos;
+    @BindView(R.id.edtCedula)
+    EditText edtCedula;
+    @BindView(R.id.edtContrasena)
+    EditText edtContrasena;
+    @BindView(R.id.edtConfirmarContrasena)
+    EditText edtConfirmarContrasena;
+    @BindView(R.id.edtCelular)
+    EditText edtCelular;
+    @BindView(R.id.edtNombreFinca)
+    EditText edtNombreFinca;
+    @BindView(R.id.edtLocalizacionFinca)
+    EditText edtLocalizacionFinca;
+    @BindView(R.id.imageViewLocalizarFinca)
+    ImageView imageViewLocalizarFinca;
+    @BindView(R.id.btnRegistrarProductor)
+    Button btnRegistrarProductor;
     @BindView(R.id.container)
     FrameLayout container;
-    @BindView(R.id.imageViewBackButton)
-    ImageView imageViewBackButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_user);
+        setContentView(R.layout.activity_register_productor);
         ButterKnife.bind(this);
-
     }
 
 
-    //region ON CLICK
-    @OnClick({R.id.btnLayoutProductor, R.id.btnLayoutComprador, R.id.imageViewBackButton})
+    //region On Click
+    @OnClick({R.id.ivBackButtonRegisterComprador, R.id.imageViewLocalizarFinca, R.id.btnRegistrarProductor})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.btnLayoutProductor:
-                startActivity(new Intent(this, RegisterProductorActivity.class));
-                break;
-            case R.id.btnLayoutComprador:
-                startActivity(new Intent(this, RegisterCompradorActivity.class));
-                break;
-            case R.id.imageViewBackButton:
+            case R.id.ivBackButtonRegisterComprador:
                 returnToParentActivity();
+                break;
+            case R.id.imageViewLocalizarFinca:
+                break;
+            case R.id.btnRegistrarProductor:
                 break;
         }
     }
     //endregion
 
-    //region METHODS
+
+    //region Methods
     private void returnToParentActivity() {
         // Obtener intent de la actividad padre
         Intent upIntent = NavUtils.getParentActivityIntent(this);
@@ -89,7 +98,6 @@ public class RegisterUserActivity extends AppCompatActivity {
         }
     }
 
+
     //endregion
-
-
 }

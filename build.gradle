@@ -41,4 +41,7 @@ ext {
 
     //Glide
     glideVersion = '4.4.0'
+
+    //Circle Image View
+    circleImageViewVersion = '2.2.0'
 }

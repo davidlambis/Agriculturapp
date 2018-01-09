@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="interedes.agriculturapp.activities.login.LoginActivity">
+    tools:context="interedes.agriculturapp.activities.register_productor.RegisterProductorActivity">
 
-    <include layout="@layout/content_login"></include>
+    <include layout="@layout/content_register_productor"></include>
 
 </android.support.design.widget.CoordinatorLayout>

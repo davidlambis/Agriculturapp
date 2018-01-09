@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="interedes.agriculturapp.activities.login.LoginActivity">
+    tools:context="interedes.agriculturapp.activities.profile.ProfileActivity">
 
-    <include layout="@layout/content_login"></include>
+    <include layout="@layout/content_profile"></include>
 
 </android.support.design.widget.CoordinatorLayout>

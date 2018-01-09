@@ -15,10 +15,26 @@
     <string name="title_register_comprador">¡Te estás registrando como comprador!</string>
     <string name="edit_text_nombres">Nombres</string>
     <string name="edit_text_apellidos">Apellidos</string>
-    <string name="edit_text_numero_cedula">Número de Cédula</string>
+    <string name="edit_text_numero_cedula">Número de Identificación(Cédula o Nit)</string>
+    <string name="edit_text_confirmar_contrasena">Confirmar Contraseña</string>
     <string name="edit_text_numero_celular">Número de Celular</string>
-    <string name="edit_text_interes_productos">Intereses de Productos</string>
+    <string name="edit_text_numero_cuenta">Número de Cuenta</string>
+    <string name="spinner_interes_productos">Intereses de Productos</string>
+    <string name="spinner_metodo_pago">Método de Pago</string>
+    <string name="spinner_banco">Seleccionar Banco</string>
+    <string name="btn_registrar_comprador">Registrar</string>
 
+    <!-- REGISTRAR PRODUCTOR -->
+    <string name="title_register_productor">¡Te estás registrando como productor!</string>
+    <string name="edit_text_nombre_finca">Nombre de Finca</string>
+    <string name="edit_text_localizacion_finca">Localización de Finca</string>
+    <string name="btn_registrar_productor">Registrar</string>
+
+    <!-- PROFILE-->
+    <string name="title_mi_cuenta">MI CUENTA</string>
+    <string name="title_mercado">MERCADO</string>
+    <string name="title_notificacion">NOTIFICACIONES</string>
+    <string name="title_exit">SALIR</string>
 
     <string name="title_selected_options">Seleccione una de las siguientes opciones</string>
 

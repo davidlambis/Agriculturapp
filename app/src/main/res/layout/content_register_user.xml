@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/container"
     tools:context=".activities.register_user.RegisterUserActivity">
 
     <ImageView
@@ -15,7 +16,6 @@
         tools:ignore="ContentDescription"></ImageView>
 
     <ScrollView
-        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_global">
@@ -27,7 +27,7 @@
             android:padding="8dp">
 
             <ImageView
-                android:id="@+id/ivBackButtonRegisterComprador"
+                android:id="@+id/imageViewBackButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@null"
@@ -110,6 +110,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="135dp"
                 android:orientation="vertical">
 
                 <TextView
