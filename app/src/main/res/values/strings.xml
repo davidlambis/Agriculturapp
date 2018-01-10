@@ -29,6 +29,10 @@
     <string name="edit_text_nombre_finca">Nombre de Finca</string>
     <string name="edit_text_localizacion_finca">Localización de Finca</string>
     <string name="btn_registrar_productor">Registrar</string>
+    <string name="spinner_tipo_producto">Tipo de Producto(Cultivo)</string>
+    <string name="edit_text_numero_hectareas">Número de Hectáreas</string>
+    <string name="edit_text_mes_siembra">Mes de Siembra</string>
+    <string name="edit_text_mes_cosecha">Mes de Cosecha</string>
 
     <!-- PROFILE-->
     <string name="title_mi_cuenta">MI CUENTA</string>

@@ -44,4 +44,7 @@ ext {
 
     //Circle Image View
     circleImageViewVersion = '2.2.0'
+
+    //Month Year Picker
+    monthYearPickerVersion = '0.0.1'
 }

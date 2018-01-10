@@ -43,6 +43,9 @@ dependencies {
     //Circle Image View
     implementation "de.hdodenhof:circleimageview:$rootProject.ext.circleImageViewVersion"
 
+    //Month Year Picker
+    implementation "com.github.twinkle942910:monthyearpicker:$rootProject.ext.monthYearPickerVersion"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
