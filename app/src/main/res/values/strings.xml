@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Agriculturapp</string>
 
+    <!-- HOME -->
+    <string name="title_ingresar">Ingresar</string>
+    <string name="title_registrarse">Registrarse</string>
+    <string name="title_contactanos">Contáctanos</string>
+
     <!-- LOGIN-->
     <string name="edit_text_cedula">Número de Cédula</string>
     <string name="edit_text_contrasena">Contraseña</string>

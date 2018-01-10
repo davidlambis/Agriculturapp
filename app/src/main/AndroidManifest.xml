@@ -21,13 +21,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activities.home.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".activities.login.LoginActivity"
             android:configChanges="screenSize|orientation"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.register_user.RegisterUserActivity"
-            android:parentActivityName=".activities.login.LoginActivity"
+            android:parentActivityName=".activities.home.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.register_comprador.RegisterCompradorActivity"
@@ -44,6 +47,7 @@
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
+
     </application>
 
 </manifest>

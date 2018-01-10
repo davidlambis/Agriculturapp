@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import interedes.agriculturapp.activities.login.LoginActivity;
+import interedes.agriculturapp.activities.home.HomeActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -12,7 +12,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, HomeActivity.class));
         finish();
     }
 }

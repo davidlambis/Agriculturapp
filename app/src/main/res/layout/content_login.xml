@@ -108,26 +108,6 @@
                         android:visibility="gone" />
 
 
-                    <LinearLayout
-                        android:id="@+id/btnLayoutRegistrarse"
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/margin_global"
-                        android:orientation="vertical"
-                        android:padding="@dimen/margin_global">
-
-                        <TextView
-                            android:id="@+id/textViewRegistrarse"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="@string/text_registrarse"
-                            android:textColor="@color/white"
-                            android:textSize="18sp" />
-
-                    </LinearLayout>
-
                     />
 
                 </LinearLayout>

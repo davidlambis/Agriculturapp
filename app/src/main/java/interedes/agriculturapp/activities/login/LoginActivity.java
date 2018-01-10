@@ -1,7 +1,6 @@
 package interedes.agriculturapp.activities.login;
 
 import android.animation.Animator;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,16 +9,13 @@ import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
-import interedes.agriculturapp.activities.register_user.RegisterUserActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -31,12 +27,8 @@ public class LoginActivity extends AppCompatActivity {
     FloatingActionButton fabLogin;
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
-    @BindView(R.id.textViewRegistrarse)
-    TextView textViewRegistrarse;
     @BindView(R.id.container)
     ScrollView container;
-    @BindView(R.id.btnLayoutRegistrarse)
-    LinearLayout btnLayoutRegistrarse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +40,12 @@ public class LoginActivity extends AppCompatActivity {
 
 
     //region On Click Cases
-    @OnClick({R.id.fabLogin, R.id.btnLayoutRegistrarse})
+    @OnClick({R.id.fabLogin})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.fabLogin:
                 break;
-            case R.id.btnLayoutRegistrarse:
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    textViewRegistrarse.setTextColor(getColor(R.color.colorPrimary));
-                    startActivity(new Intent(this, RegisterUserActivity.class));
-                } else {
-                    startActivity(new Intent(this, RegisterUserActivity.class));
-                }
+            default:
                 break;
         }
     }
