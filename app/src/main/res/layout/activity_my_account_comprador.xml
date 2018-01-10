@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="interedes.agriculturapp.activities.productor.RegisterProductorActivity">
+    tools:context="interedes.agriculturapp.activities.comprador.MyAccountCompradorActivity">
 
-    <include layout="@layout/content_register_productor"></include>
+    <include layout="@layout/content_my_account_comprador"></include>
 
 </android.support.design.widget.CoordinatorLayout>

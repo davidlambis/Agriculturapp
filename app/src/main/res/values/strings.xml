@@ -29,6 +29,17 @@
     <string name="spinner_banco">Seleccionar Banco</string>
     <string name="btn_registrar_comprador">Registrar</string>
 
+    <!-- MI CUENTA COMPRADOR -->
+    <string name="title_mi_cuenta_comprador">Mi cuenta</string>
+    <string name="title_compras">Compras</string>
+    <string name="title_mis_proveedores">Mis Proveedores</string>
+    <string name="title_preguntas">Preguntas</string>
+    <string name="title_ofertas">Ofertas</string>
+    <string name="title_compras_realizadas">Compras Realizadas</string>
+    <string name="title_productos_interes">Productos de Interés</string>
+    <string name="title_configuracion">Configuración</string>
+    <string name="title_editar_cuenta">Editar mi Cuenta</string>
+
     <!-- REGISTRAR PRODUCTOR -->
     <string name="title_register_productor">¡Te estás registrando como productor!</string>
     <string name="edit_text_nombre_finca">Nombre de Finca</string>

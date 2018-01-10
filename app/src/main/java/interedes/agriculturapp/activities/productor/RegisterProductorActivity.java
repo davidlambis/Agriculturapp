@@ -1,4 +1,4 @@
-package interedes.agriculturapp.activities.register_comprador;
+package interedes.agriculturapp.activities.productor;
 
 import android.content.Intent;
 import android.os.Build;
@@ -15,60 +15,93 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog;
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
-import interedes.agriculturapp.activities.profile.ProfileActivity;
 
-public class RegisterCompradorActivity extends AppCompatActivity {
+public class RegisterProductorActivity extends AppCompatActivity {
 
-    //region UI Elements
     @BindView(R.id.ivBackButtonRegisterComprador)
     ImageView ivBackButtonRegisterComprador;
+    @BindView(R.id.edtNombres)
+    EditText edtNombres;
+    @BindView(R.id.edtApellidos)
+    EditText edtApellidos;
+    @BindView(R.id.edtCedula)
+    EditText edtCedula;
     @BindView(R.id.edtContrasena)
     EditText edtContrasena;
     @BindView(R.id.edtConfirmarContrasena)
     EditText edtConfirmarContrasena;
-    @BindView(R.id.spinnerInteresProductos)
-    MaterialBetterSpinner spinnerInteresProductos;
+    @BindView(R.id.edtCelular)
+    EditText edtCelular;
+    @BindView(R.id.edtNombreFinca)
+    EditText edtNombreFinca;
+    @BindView(R.id.edtLocalizacionFinca)
+    EditText edtLocalizacionFinca;
+    @BindView(R.id.imageViewLocalizarFinca)
+    ImageView imageViewLocalizarFinca;
+    @BindView(R.id.btnRegistrarProductor)
+    Button btnRegistrarProductor;
+    @BindView(R.id.container)
+    FrameLayout container;
     @BindView(R.id.spinnerMetodoPago)
     MaterialBetterSpinner spinnerMetodoPago;
     @BindView(R.id.spinnerBanco)
     MaterialBetterSpinner spinnerBanco;
-    @BindView(R.id.container)
-    FrameLayout container;
     @BindView(R.id.textInputNumeroCuenta)
     TextInputLayout textInputNumeroCuenta;
     @BindView(R.id.edtNumeroCuenta)
     EditText edtNumeroCuenta;
-    @BindView(R.id.btnRegistrarComprador)
-    Button btnRegistrarComprador;
+    @BindView(R.id.spinnerTipoProducto)
+    MaterialBetterSpinner spinnerTipoProducto;
+    @BindView(R.id.edtMesSiembra)
+    EditText edtMesSiembra;
+    @BindView(R.id.edtMesCosecha)
+    EditText edtMesCosecha;
 
+    //Variables Globales
+    private boolean is_mes_cultivo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_comprador);
+        setContentView(R.layout.activity_register_productor);
         ButterKnife.bind(this);
+        loadCoordenadas();
         loadInfo();
     }
 
+
     //region On Click
-    @OnClick({R.id.ivBackButtonRegisterComprador, R.id.btnRegistrarComprador})
+    @OnClick({R.id.ivBackButtonRegisterComprador, R.id.imageViewLocalizarFinca, R.id.btnRegistrarProductor, R.id.edtMesSiembra, R.id.edtMesCosecha})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ivBackButtonRegisterComprador:
                 returnToParentActivity();
                 break;
-            case R.id.btnRegistrarComprador:
-                //startActivity(new Intent(this, ProfileActivity.class));
+            case R.id.imageViewLocalizarFinca:
+                break;
+            case R.id.btnRegistrarProductor:
+                break;
+            case R.id.edtMesSiembra:
+                is_mes_cultivo = true;
+                loadMeses();
+                break;
+            case R.id.edtMesCosecha:
+                is_mes_cultivo = false;
+                loadMeses();
                 break;
             default:
                 break;
@@ -76,17 +109,13 @@ public class RegisterCompradorActivity extends AppCompatActivity {
     }
     //endregion
 
-    //region Methods
-    private void loadInfo() {
-        //Spinner Interes Productos
-        String[] itemsInteresProductos = {"Aguacate", "Cacao", "Fríjol"};
-        List<String> interesProductosList = new ArrayList<>();
-        interesProductosList.addAll(Arrays.asList(itemsInteresProductos));
-        spinnerInteresProductos.setAdapter(null);
-        ArrayAdapter<String> interesProductosArrayAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, interesProductosList);
-        spinnerInteresProductos.setAdapter(interesProductosArrayAdapter);
 
+    //region Methods
+    private void loadCoordenadas() {
+        edtLocalizacionFinca.setText("75.921231, -4.23132");
+    }
+
+    private void loadInfo() {
         //Spinner Método de Pago
         String[] itemsMetodoPago = {"Transferencia Bancaria", "Efectivo", "Otros"};
         final List<String> metodoPagoList = new ArrayList<>();
@@ -139,6 +168,42 @@ public class RegisterCompradorActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //Spinner Tipo Producto
+        String[] itemsTipoProducto = {"Aguacate", "Cacao", "Fríjol"};
+        final List<String> tipoProductoList = new ArrayList<>();
+        tipoProductoList.addAll(Arrays.asList(itemsTipoProducto));
+        spinnerTipoProducto.setAdapter(null);
+        ArrayAdapter<String> tipoProductoArrayAdapter =
+                new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, tipoProductoList);
+        spinnerTipoProducto.setAdapter(tipoProductoArrayAdapter);
+    }
+
+    private void loadMeses() {
+        YearMonthPickerDialog yearMonthPickerDialog = new YearMonthPickerDialog(this, new YearMonthPickerDialog.OnDateSetListener() {
+            @Override
+            public void onYearMonthSet(int year, int month) {
+                /*Locale locale = getResources().getConfiguration().locale;
+                Locale.setDefault(locale);*/
+                Locale spanish = new Locale("es", "ES");
+                Locale.setDefault(spanish);
+                Calendar calendar = Calendar.getInstance(spanish);
+                calendar.set(Calendar.YEAR, year);
+                //month = Integer.parseInt(calendar.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault()));
+                calendar.set(Calendar.MONTH, month);
+
+
+                SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy");
+
+                if (is_mes_cultivo) {
+                    edtMesSiembra.setText(dateFormat.format(calendar.getTime()));
+                } else {
+                    edtMesCosecha.setText(dateFormat.format(calendar.getTime()));
+                }
+            }
+        });
+
+        yearMonthPickerDialog.show();
     }
 
     private void returnToParentActivity() {
@@ -169,6 +234,7 @@ public class RegisterCompradorActivity extends AppCompatActivity {
             onBackPressed();
         }
     }
+
 
     //endregion
 }
