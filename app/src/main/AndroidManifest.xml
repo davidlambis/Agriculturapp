@@ -49,6 +49,7 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.comprador.MyAccountCompradorActivity"
+            android:parentActivityName=".activities.profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
