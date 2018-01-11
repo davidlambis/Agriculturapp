@@ -349,7 +349,6 @@
 
                     <EditText
                         android:id="@+id/edtMesSiembra"
-                        style="@style/MonthDialogTheme"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:clickable="true"
@@ -371,7 +370,6 @@
 
                     <EditText
                         android:id="@+id/edtMesCosecha"
-                        style="@style/MonthDialogTheme"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:clickable="true"

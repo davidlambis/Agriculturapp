@@ -40,6 +40,21 @@
     <string name="title_configuracion">Configuración</string>
     <string name="title_editar_cuenta">Editar mi Cuenta</string>
 
+    <!-- MI CUENTA PRODUCTOR-->
+    <string name="btn_agregar_producto">Agregar Producto</string>
+    <string name="title_mis_cultivos">Mis Cultivos</string>
+    <string name="title_ventas_realizadas">Ventas Realizadas</string>
+    <string name="title_clientes">Clientes</string>
+    <string name="title_asistencia_tecnica">Asistencia Técnica</string>
+    <string name="title_plagas">Plagas</string>
+    <string name="title_enfermedades">Enfermedades</string>
+    <string name="title_insumos">Insumos</string>
+    <string name="title_preguntas_frecuentes">Preguntas Frecuentes</string>
+    <string name="title_busqueda">Búsqueda</string>
+    <string name="title_contabilidad">Contabilidad</string>
+    <string name="title_total">Total</string>
+
+
     <!-- REGISTRAR PRODUCTOR -->
     <string name="title_register_productor">¡Te estás registrando como productor!</string>
     <string name="edit_text_nombre_finca">Nombre de Finca</string>

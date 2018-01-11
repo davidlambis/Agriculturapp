@@ -50,7 +50,8 @@
         <activity
             android:name=".activities.comprador.MyAccountCompradorActivity"
             android:parentActivityName=".activities.profile.ProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.productor.MyAccountProductorActivity"></activity>
     </application>
 
 </manifest>
