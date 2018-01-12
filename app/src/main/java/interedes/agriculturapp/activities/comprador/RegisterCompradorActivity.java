@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -67,13 +68,14 @@ public class RegisterCompradorActivity extends AppCompatActivity {
                 returnToParentActivity();
                 break;
             case R.id.btnRegistrarComprador:
-                //TODO Diálogo Registro Éxitoso como Comprador, luego lanza Profile Activity
+                loadDialogoRegistroExitoso();
                 //startActivity(new Intent(this, ProfileActivity.class));
                 break;
             default:
                 break;
         }
     }
+
     //endregion
 
     //region Methods
@@ -139,6 +141,14 @@ public class RegisterCompradorActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void loadDialogoRegistroExitoso() {
+        View dialogo = View.inflate(this, R.layout.dialogo_registro_comprador, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogo);
+        builder.show();
+
     }
 
     private void returnToParentActivity() {
