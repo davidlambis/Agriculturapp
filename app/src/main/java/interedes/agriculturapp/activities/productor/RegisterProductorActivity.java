@@ -94,6 +94,7 @@ public class RegisterProductorActivity extends AppCompatActivity {
             case R.id.imageViewLocalizarFinca:
                 break;
             case R.id.btnRegistrarProductor:
+                //TODO Diálogo Registro Éxitoso como Productor, luego lanza Profile Activity
                 break;
             case R.id.edtMesSiembra:
                 is_mes_cultivo = true;

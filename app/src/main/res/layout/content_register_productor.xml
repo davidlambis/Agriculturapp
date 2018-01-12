@@ -232,6 +232,7 @@
                             android:textColor="@color/white" />
                     </android.support.design.widget.TextInputLayout>
 
+
                     <ImageView
                         android:id="@+id/imageViewLocalizarFinca"
                         android:layout_width="35dp"
@@ -384,6 +385,7 @@
                         android:textColor="@color/white" />
                 </android.support.design.widget.TextInputLayout>
 
+                <!--TODO Cantidad por Calidad del Producto -->
 
                 <Button
                     android:id="@+id/btnRegistrarProductor"

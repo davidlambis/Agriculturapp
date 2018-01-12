@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/fondo_login"
-        tools:ignore="ContentDescription"></ImageView>
+        tools:ignore="ContentDescription" />
 
     <ScrollView
         android:id="@+id/container"
@@ -75,9 +75,9 @@
                             android:id="@+id/edtContrasena"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/ic_candado"
+                            android:drawableLeft="@drawable/ic_candado_imgBaker"
                             android:drawablePadding="16dp"
-                            android:drawableStart="@drawable/ic_candado"
+                            android:drawableStart="@drawable/ic_candado_imgBaker"
                             android:hint="@string/edit_text_contrasena"
                             android:inputType="textPassword"
                             android:padding="8dp" />

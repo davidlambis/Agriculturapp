@@ -67,6 +67,7 @@ public class RegisterCompradorActivity extends AppCompatActivity {
                 returnToParentActivity();
                 break;
             case R.id.btnRegistrarComprador:
+                //TODO Diálogo Registro Éxitoso como Comprador, luego lanza Profile Activity
                 //startActivity(new Intent(this, ProfileActivity.class));
                 break;
             default:
