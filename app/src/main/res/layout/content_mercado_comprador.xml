@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.comprador.MercadoCompradorActivity">
+    tools:context=".activities.comprador.mercado_comprador.MercadoCompradorActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -86,8 +86,7 @@
 
             <view style="@style/divider" />
 
-            <!--TODO RecyclerView de Cardviews de Productos de Interés -->
-
+            <include layout="@layout/content_recyclerview" />
 
         </LinearLayout>
 

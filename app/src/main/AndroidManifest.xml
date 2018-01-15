@@ -52,7 +52,7 @@
             android:parentActivityName=".activities.profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.productor.MyAccountProductorActivity" />
-        <activity android:name=".activities.comprador.MercadoCompradorActivity" />
+        <activity android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity" />
         <activity android:name=".activities.comprador.DetalleProductoMercadoActivity"></activity>
     </application>
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog;
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
@@ -94,7 +96,7 @@ public class RegisterProductorActivity extends AppCompatActivity {
             case R.id.imageViewLocalizarFinca:
                 break;
             case R.id.btnRegistrarProductor:
-                //TODO Diálogo Registro Éxitoso como Productor, luego lanza Profile Activity
+                loadDialogoRegistroExitoso();
                 break;
             case R.id.edtMesSiembra:
                 is_mes_cultivo = true;
@@ -205,6 +207,16 @@ public class RegisterProductorActivity extends AppCompatActivity {
         });
 
         yearMonthPickerDialog.show();
+    }
+
+    private void loadDialogoRegistroExitoso() {
+        View dialogo = View.inflate(this, R.layout.dialogo_registro_comprador, null);
+        TextView textViewMisCultivos = dialogo.findViewById(R.id.textViewBuscarProductos);
+        textViewMisCultivos.setText(getString(R.string.title_mis_cultivos));
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogo);
+        builder.show();
+
     }
 
     private void returnToParentActivity() {

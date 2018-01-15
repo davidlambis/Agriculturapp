@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Agriculturapp</string>
 
+    <!-- GLOBALES -->
+    <string name="results_global_search">Mostrando %d Resultados</string>
+
     <!-- HOME -->
     <string name="title_ingresar">Ingresar</string>
     <string name="title_registrarse">Registrarse</string>
@@ -57,6 +60,12 @@
     <string name="title_filtrar_busqueda">Filtra tu búsqueda</string>
     <string name="spinner_calidad">Calidad</string>
     <string name="spinner_ubicacion">Ubicación</string>
+    <string name="title_ubicacion">Ubicación:</string>
+    <string name="title_mes_cosecha">Mes de Cosecha:</string>
+    <string name="title_disponibilidad">Disponibilidad:</string>
+    <string name="title_primera">Primera:</string>
+    <string name="title_segunda">Segunda:</string>
+    <string name="title_tercera">Tercera:</string>
 
     <!-- REGISTRAR PRODUCTOR -->
     <string name="title_register_productor">¡Te estás registrando como productor!</string>
