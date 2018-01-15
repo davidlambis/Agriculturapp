@@ -73,5 +73,11 @@
         <item name="android:background">?android:attr/listDivider</item>
     </style>
 
+    <!-- Rating Bar-->
+    <style name="ratingBarTheme" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
 
 </resources>

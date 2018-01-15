@@ -67,6 +67,17 @@
     <string name="title_segunda">Segunda:</string>
     <string name="title_tercera">Tercera:</string>
 
+    <!-- DETALLE OFERTAR MERCADO-->
+    <string name="title_hacer_oferta">¡Haz tu oferta!</string>
+    <string name="title_subtotal">Subtotal</string>
+    <string name="title_oferta">El total de su oferta es:</string>
+    <string name="btn_ofertar">Ofertar</string>
+    <string name="title_cantidad">Cantidad</string>
+    <string name="title_simbolo_money">$</string>
+    <string name="edit_text_oferta">Oferta</string>
+    <string name="title_simbolo_kg">/Kg</string>
+
+
     <!-- REGISTRAR PRODUCTOR -->
     <string name="title_register_productor">¡Te estás registrando como productor!</string>
     <string name="edit_text_nombre_finca">Nombre de Finca</string>

@@ -51,9 +51,24 @@
             android:name=".activities.comprador.MyAccountCompradorActivity"
             android:parentActivityName=".activities.profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.productor.MyAccountProductorActivity" />
-        <activity android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity" />
-        <activity android:name=".activities.comprador.DetalleProductoMercadoActivity"></activity>
+        <activity
+            android:name=".activities.productor.MyAccountProductorActivity"
+            android:parentActivityName=".activities.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
+            android:parentActivityName=".activities.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.comprador.DetalleProductoMercadoActivity"
+            android:parentActivityName=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.comprador.DetalleOfertarMercadoActivity"
+            android:configChanges="screenSize|orientation"
+            android:parentActivityName=".activities.comprador.DetalleProductoMercadoActivity"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>

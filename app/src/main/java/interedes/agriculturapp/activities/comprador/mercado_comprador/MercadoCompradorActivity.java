@@ -15,8 +15,6 @@ public class MercadoCompradorActivity extends AppCompatActivity {
 
     @BindView(R.id.imageViewBackButton)
     ImageView imageViewBackButton;
-    @BindView(R.id.recyclerViewProductosMercado)
-    RecyclerView recyclerViewProductosMercado;
     @BindView(R.id.container)
     FrameLayout container;
 
