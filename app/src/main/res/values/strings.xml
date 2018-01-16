@@ -67,6 +67,15 @@
     <string name="title_segunda">Segunda:</string>
     <string name="title_tercera">Tercera:</string>
 
+    <!-- DIALOGO OFERTA -->
+    <string name="title_vas_hacer_oferta">Vas a hacer una oferta al señor %1$s por :</string>
+    <string name="title_valor_oferta">$ %1$d COP</string>
+    <string name="btn_aceptar">Aceptar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="title_tu_oferta_enviada">¡TU OFERTA HA SIDO ENVIADA !</string>
+    <string name="title_en_espera_aceptacion">EN ESPERA DE ACEPTACIÓN DEL PRODUCTOR</string>
+
+
     <!-- DETALLE OFERTAR MERCADO-->
     <string name="title_hacer_oferta">¡Haz tu oferta!</string>
     <string name="title_subtotal">Subtotal</string>
