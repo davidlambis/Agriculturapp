@@ -67,6 +67,7 @@
     <string name="title_segunda">Segunda:</string>
     <string name="title_tercera">Tercera:</string>
 
+
     <!-- DIALOGO OFERTA -->
     <string name="title_vas_hacer_oferta">Vas a hacer una oferta al señor %1$s por :</string>
     <string name="title_valor_oferta">$ %1$d COP</string>
@@ -75,6 +76,20 @@
     <string name="title_tu_oferta_enviada">¡TU OFERTA HA SIDO ENVIADA !</string>
     <string name="title_en_espera_aceptacion">EN ESPERA DE ACEPTACIÓN DEL PRODUCTOR</string>
 
+    <!-- VENTAS PRODUCTOR -->
+    <string name="title_productor_ventas">Productor-Ventas</string>
+    <string name="title_mis_ventas">Mis Ventas</string>
+    <string name="title_destino">Destino</string>
+    <string name="title_fecha_compra">Fecha de Compra:</string>
+    <string name="title_calidad">Calidad</string>
+    <string name="title_cantidad_ventas">Cantidad</string>
+    <string name="title_comprador_ventas">Comprador</string>
+    <string name="title_oferta_ventas">Oferta: $ %1$s</string>
+    <string name="title_calidad_cantidad">Calidad-Cantidad</string>
+
+    <!-- MIS CULTIVOS PRODUCTOR -->
+    <string name="title_numero_visitas">Numero de Visitas: %1$i</string>
+    <string name="title_disponible_hasta">Disponible hasta el %1$d</string>
 
     <!-- DETALLE OFERTAR MERCADO-->
     <string name="title_hacer_oferta">¡Haz tu oferta!</string>

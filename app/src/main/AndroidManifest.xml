@@ -68,7 +68,9 @@
             android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.comprador.DetalleProductoMercadoActivity"
             android:theme="@style/LoginTheme"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.productor.MisVentasProductorActivity" />
+        <activity android:name=".activities.productor.MisCultivosProductorActivity"></activity>
     </application>
 
 </manifest>
