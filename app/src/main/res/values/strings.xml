@@ -38,7 +38,6 @@
     <string name="title_que_deseas_hacer">¿ Qué deseas hacer ahora ?</string>
     <string name="title_buscar_productos">Buscar Productos</string>
 
-
     <!-- MI CUENTA COMPRADOR -->
     <string name="title_mi_cuenta_comprador">Mi cuenta</string>
     <string name="title_compras">Compras</string>
@@ -67,7 +66,6 @@
     <string name="title_segunda">Segunda:</string>
     <string name="title_tercera">Tercera:</string>
 
-
     <!-- DIALOGO OFERTA -->
     <string name="title_vas_hacer_oferta">Vas a hacer una oferta al señor %1$s por :</string>
     <string name="title_valor_oferta">$ %1$d COP</string>
@@ -91,6 +89,19 @@
     <string name="title_numero_visitas">Numero de Visitas: %1$i</string>
     <string name="title_disponible_hasta">Disponible hasta el %1$d</string>
 
+    <!-- PREGUNTAS PRODUCTOR-->
+    <string name="title_preguntas_productor">Preguntas</string>
+    <string name="title_pregunta_numero">Pregunta %1$d</string>
+    <string name="btn_responder">Responder</string>
+
+    <!-- OFERTAS PRODUCTOR -->
+    <string name="title_ofertas_productor">Ofertas</string>
+    <string name="btn_rechazar">Rechazar</string>
+    <string name="btn_preguntar">Preguntar</string>
+    <string name="btn_aceptar_productor">Aceptar</string>
+    <string name="title_oferta_numero">Oferta %1$d</string>
+    <string name="title_descripcion_oferta">%1$s te ofertó %2$d por el cultivo de %3$s de %4$d - Calidad de %5$s</string>
+
     <!-- DETALLE OFERTAR MERCADO-->
     <string name="title_hacer_oferta">¡Haz tu oferta!</string>
     <string name="title_subtotal">Subtotal</string>
@@ -100,7 +111,6 @@
     <string name="title_simbolo_money">$</string>
     <string name="edit_text_oferta">Oferta</string>
     <string name="title_simbolo_kg">/Kg</string>
-
 
     <!-- REGISTRAR PRODUCTOR -->
     <string name="title_register_productor">¡Te estás registrando como productor!</string>
@@ -131,7 +141,6 @@
     <string name="title_mercado">MERCADO</string>
     <string name="title_notificacion">NOTIFICACIONES</string>
     <string name="title_exit">SALIR</string>
-
     <string name="title_selected_options">Seleccione una de las siguientes opciones</string>
 
 

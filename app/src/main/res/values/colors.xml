@@ -10,4 +10,8 @@
     <color name="grey_900">#212121</color>
     <color name="black">@android:color/black</color>
 
+    <color name="red_900">#B71C1C</color>
+    <color name="lime_900">#827717</color>
+    <color name="light_green_800">#558B2F</color>
+
 </resources>

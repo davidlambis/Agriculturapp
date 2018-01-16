@@ -70,7 +70,9 @@
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activities.productor.MisVentasProductorActivity" />
-        <activity android:name=".activities.productor.MisCultivosProductorActivity"></activity>
+        <activity android:name=".activities.productor.MisCultivosProductorActivity" />
+        <activity android:name=".activities.productor.PreguntasProductorActivity" />
+        <activity android:name=".activities.productor.OfertasProductorActivity"></activity>
     </application>
 
 </manifest>

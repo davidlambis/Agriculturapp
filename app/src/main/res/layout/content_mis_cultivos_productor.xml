@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/fondo_ventas_productor"
+        android:src="@drawable/fondo_mis_cultivos_productor"
         tools:ignore="ContentDescription" />
 
     <android.support.v4.widget.NestedScrollView
