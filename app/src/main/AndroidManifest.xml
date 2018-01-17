@@ -72,7 +72,10 @@
         <activity android:name=".activities.productor.MisVentasProductorActivity" />
         <activity android:name=".activities.productor.MisCultivosProductorActivity" />
         <activity android:name=".activities.productor.PreguntasProductorActivity" />
-        <activity android:name=".activities.productor.OfertasProductorActivity"></activity>
+        <activity android:name=".activities.productor.OfertasProductorActivity" />
+        <activity android:name=".activities.productor.MisClientesProductorActivity" />
+        <activity android:name=".activities.productor.AsistenciaTecnicaProductorActivity" />
+        <activity android:name=".activities.productor.PlagasProductorActivity"></activity>
     </application>
 
 </manifest>

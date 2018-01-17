@@ -86,7 +86,7 @@
     <string name="title_calidad_cantidad">Calidad-Cantidad</string>
 
     <!-- MIS CULTIVOS PRODUCTOR -->
-    <string name="title_numero_visitas">Numero de Visitas: %1$i</string>
+    <string name="title_numero_visitas">Numero de Visitas: %1$d</string>
     <string name="title_disponible_hasta">Disponible hasta el %1$d</string>
 
     <!-- PREGUNTAS PRODUCTOR-->
@@ -101,6 +101,18 @@
     <string name="btn_aceptar_productor">Aceptar</string>
     <string name="title_oferta_numero">Oferta %1$d</string>
     <string name="title_descripcion_oferta">%1$s te ofertó %2$d por el cultivo de %3$s de %4$d - Calidad de %5$s</string>
+
+    <!-- CLIENTES PRODUCTOR -->
+    <string name="title_mis_clientes">Mis Clientes</string>
+    <string name="title_historial_ventas">Historial de Ventas</string>
+    <string name="title_celular">Celular: </string>
+    <string name="title_direccion">Dirección: </string>
+
+    <!--  PLAGAS PRODUCTOR -->
+    <string name="title_numero_lote">Lote %1$d</string>
+    <string name="title_asistencia_tecnica_plagas">Asistencia Técnica-Plagas</string>
+    <string name="title_tipo_plaga"> Plagas - %1$s </string>
+
 
     <!-- DETALLE OFERTAR MERCADO-->
     <string name="title_hacer_oferta">¡Haz tu oferta!</string>
