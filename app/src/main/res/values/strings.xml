@@ -113,6 +113,10 @@
     <string name="title_asistencia_tecnica_plagas">Asistencia Técnica-Plagas</string>
     <string name="title_tipo_plaga"> Plagas - %1$s </string>
 
+    <!-- DETALLE PLAGA -->
+    <string name="title_plaga_con_numero">%1$s - Plaga %2$d</string>
+    <string name="title_agroinsumos_pesticidas">AgroInsumos y Pesticidas</string>
+
 
     <!-- DETALLE OFERTAR MERCADO-->
     <string name="title_hacer_oferta">¡Haz tu oferta!</string>
