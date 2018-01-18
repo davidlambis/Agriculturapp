@@ -28,7 +28,7 @@ task clean(type: Delete) {
 
 ext {
     //Sdk
-    minSdkVersion = 16
+    minSdkVersion = 19
     targetSdkVersion = 27
     compileSdkVersion = 27
     supportLibraryVersion = '27.0.2'
@@ -37,7 +37,7 @@ ext {
     butterknifeVersion = '8.8.1'
 
     //Spinner
-    library_material_spinner="1.1.0"
+    library_material_spinner = "1.1.0"
 
     //Glide
     glideVersion = '4.4.0'

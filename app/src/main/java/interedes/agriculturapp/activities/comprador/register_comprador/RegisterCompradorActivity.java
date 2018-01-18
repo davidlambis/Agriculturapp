@@ -1,4 +1,4 @@
-package interedes.agriculturapp.activities.comprador;
+package interedes.agriculturapp.activities.comprador.register_comprador;
 
 import android.content.Intent;
 import android.os.Build;
@@ -6,12 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -19,38 +14,43 @@ import android.widget.ImageView;
 
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
 
-public class RegisterCompradorActivity extends AppCompatActivity {
+public class RegisterCompradorActivity extends AppCompatActivity implements RegisterCompradorView {
 
     //region UI Elements
     @BindView(R.id.ivBackButtonRegisterComprador)
     ImageView ivBackButtonRegisterComprador;
+    @BindView(R.id.edtNombres)
+    EditText edtNombres;
+    @BindView(R.id.edtApellidos)
+    EditText edtApellidos;
+    @BindView(R.id.edtCedula)
+    EditText edtCedula;
     @BindView(R.id.edtContrasena)
     EditText edtContrasena;
     @BindView(R.id.edtConfirmarContrasena)
     EditText edtConfirmarContrasena;
+    @BindView(R.id.edtCelular)
+    EditText edtCelular;
     @BindView(R.id.spinnerInteresProductos)
     MaterialBetterSpinner spinnerInteresProductos;
     @BindView(R.id.spinnerMetodoPago)
     MaterialBetterSpinner spinnerMetodoPago;
     @BindView(R.id.spinnerBanco)
     MaterialBetterSpinner spinnerBanco;
-    @BindView(R.id.container)
-    FrameLayout container;
-    @BindView(R.id.textInputNumeroCuenta)
-    TextInputLayout textInputNumeroCuenta;
     @BindView(R.id.edtNumeroCuenta)
     EditText edtNumeroCuenta;
+    @BindView(R.id.textInputNumeroCuenta)
+    TextInputLayout textInputNumeroCuenta;
     @BindView(R.id.btnRegistrarComprador)
     Button btnRegistrarComprador;
+    @BindView(R.id.container)
+    FrameLayout container;
+    //endregion
 
 
     @Override
@@ -58,9 +58,36 @@ public class RegisterCompradorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_comprador);
         ButterKnife.bind(this);
-        loadInfo();
+        //loadInfo();
+
+
     }
 
+    //region Métodos Interfaz
+    @Override
+    @OnClick(R.id.ivBackButtonRegisterComprador)
+    public void navigateToParentActivity() {
+        ivBackButtonRegisterComprador.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        returnToParentActivity();
+    }
+
+    @Override
+    public void registerComprador() {
+
+    }
+
+    @Override
+    public void loadDialogoRegistroExitoso() {
+
+    }
+
+    @Override
+    public void loadInfo() {
+
+    }
+    //endregion
+
+    /*
     //region On Click
     @OnClick({R.id.ivBackButtonRegisterComprador, R.id.btnRegistrarComprador})
     public void onViewClicked(View view) {
@@ -152,6 +179,10 @@ public class RegisterCompradorActivity extends AppCompatActivity {
 
     }
 
+  */
+
+
+    //region Métodos Generales
     private void returnToParentActivity() {
         // Obtener intent de la actividad padre
         Intent upIntent = NavUtils.getParentActivityIntent(this);
@@ -180,6 +211,16 @@ public class RegisterCompradorActivity extends AppCompatActivity {
             onBackPressed();
         }
     }
+    //endregion
+
+
+    //region Ciclo de Vida de Actividad
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
     //endregion
+
 }

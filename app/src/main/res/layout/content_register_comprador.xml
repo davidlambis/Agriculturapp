@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.comprador.RegisterCompradorActivity">
+    tools:context=".activities.comprador.register_comprador.RegisterCompradorActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/fondo_agr_app_registro_comprador"
-        tools:ignore="ContentDescription"></ImageView>
+        tools:ignore="ContentDescription" />
 
     <ScrollView
         android:layout_width="match_parent"

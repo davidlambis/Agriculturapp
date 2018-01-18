@@ -7,21 +7,24 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
-import interedes.agriculturapp.activities.comprador.RegisterCompradorActivity;
+import interedes.agriculturapp.activities.comprador.register_comprador.RegisterCompradorActivity;
 import interedes.agriculturapp.activities.productor.RegisterProductorActivity;
 
 public class RegisterUserActivity extends AppCompatActivity implements RegisterUserView {
 
 
+    //region UI Elements
     @BindView(R.id.imageViewBackButton)
     ImageView imageViewBackButton;
     @BindView(R.id.imageViewProductor)
@@ -38,6 +41,9 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterU
     LinearLayout linearLayoutAyudaRegistro;
     @BindView(R.id.container)
     FrameLayout container;
+    @BindView(R.id.progressBar)
+    ProgressBar progressBar;
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,21 +58,27 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterU
     @OnClick(R.id.linearLayoutProductor)
     public void navigateToRegistrarProductor() {
         imageViewProductor.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        showProgress();
         startActivity(new Intent(this, RegisterProductorActivity.class));
+        hideProgress();
     }
 
     @Override
     @OnClick(R.id.linearLayoutComprador)
     public void navigateToRegistrarComprador() {
         imageViewComprador.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        showProgress();
         startActivity(new Intent(this, RegisterCompradorActivity.class));
+        hideProgress();
     }
 
     @Override
     @OnClick(R.id.linearLayoutAyudaRegistro)
     public void navigateToAyudaRegistro() {
         textViewAyudaRegistro.setTextColor(getResources().getColor(R.color.colorPrimary));
+        showProgress();
         Snackbar.make(container, "Go to Ayuda Registro", Snackbar.LENGTH_SHORT).show();
+        hideProgress();
     }
 
     @Override
@@ -74,6 +86,16 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterU
     public void navigateToParentActivity() {
         imageViewBackButton.setColorFilter(getResources().getColor(R.color.colorPrimary));
         returnToParentActivity();
+    }
+
+    @Override
+    public void showProgress() {
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgress() {
+        progressBar.setVisibility(View.GONE);
     }
 
     @Override

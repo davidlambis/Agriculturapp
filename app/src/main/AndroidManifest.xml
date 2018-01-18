@@ -33,7 +33,7 @@
             android:parentActivityName=".activities.home.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.comprador.RegisterCompradorActivity"
+            android:name=".activities.comprador.register_comprador.RegisterCompradorActivity"
             android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
