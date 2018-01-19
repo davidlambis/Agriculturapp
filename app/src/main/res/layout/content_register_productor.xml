@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.productor.RegisterProductorActivity">
+    tools:context=".activities.productor.register_productor.RegisterProductorActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:padding="8dp">
 
                 <ImageView
-                    android:id="@+id/ivBackButtonRegisterComprador"
+                    android:id="@+id/ivBackButtonRegisterProductor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_back_button" />

@@ -1,4 +1,4 @@
-package interedes.agriculturapp.activities.comprador.register_comprador;
+package interedes.agriculturapp.activities.productor.register_productor;
 
 import android.content.Intent;
 import android.os.Build;
@@ -6,24 +6,39 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog;
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
+import interedes.agriculturapp.activities.profile.ProfileActivity;
 
-public class RegisterCompradorActivity extends AppCompatActivity implements RegisterCompradorView {
+public class RegisterProductorActivity extends AppCompatActivity implements RegisterProductorView {
 
-    //region UI Elements
-    @BindView(R.id.ivBackButtonRegisterComprador)
-    ImageView ivBackButtonRegisterComprador;
+    //UI Elements
+    @BindView(R.id.ivBackButtonRegisterProductor)
+    ImageView ivBackButtonRegisterProductor;
     @BindView(R.id.edtNombres)
     EditText edtNombres;
     @BindView(R.id.edtApellidos)
@@ -36,8 +51,12 @@ public class RegisterCompradorActivity extends AppCompatActivity implements Regi
     EditText edtConfirmarContrasena;
     @BindView(R.id.edtCelular)
     EditText edtCelular;
-    @BindView(R.id.spinnerInteresProductos)
-    MaterialBetterSpinner spinnerInteresProductos;
+    @BindView(R.id.edtNombreFinca)
+    EditText edtNombreFinca;
+    @BindView(R.id.edtLocalizacionFinca)
+    EditText edtLocalizacionFinca;
+    @BindView(R.id.imageViewLocalizarFinca)
+    ImageView imageViewLocalizarFinca;
     @BindView(R.id.spinnerMetodoPago)
     MaterialBetterSpinner spinnerMetodoPago;
     @BindView(R.id.spinnerBanco)
@@ -46,77 +65,50 @@ public class RegisterCompradorActivity extends AppCompatActivity implements Regi
     EditText edtNumeroCuenta;
     @BindView(R.id.textInputNumeroCuenta)
     TextInputLayout textInputNumeroCuenta;
-    @BindView(R.id.btnRegistrarComprador)
-    Button btnRegistrarComprador;
+    @BindView(R.id.spinnerTipoProducto)
+    MaterialBetterSpinner spinnerTipoProducto;
+    @BindView(R.id.edtNumeroHectareas)
+    EditText edtNumeroHectareas;
+    @BindView(R.id.edtMesSiembra)
+    EditText edtMesSiembra;
+    @BindView(R.id.edtMesCosecha)
+    EditText edtMesCosecha;
+    @BindView(R.id.btnRegistrarProductor)
+    Button btnRegistrarProductor;
     @BindView(R.id.container)
     FrameLayout container;
-    //endregion
 
+    //Variables globales
+    private boolean is_mes_cultivo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_comprador);
+        setContentView(R.layout.activity_register_productor);
         ButterKnife.bind(this);
-        //loadInfo();
-
-
+        loadInfo();
+        loadCoordenadas();
     }
+
 
     //region Métodos Interfaz
     @Override
-    @OnClick(R.id.ivBackButtonRegisterComprador)
-    public void navigateToParentActivity() {
-        ivBackButtonRegisterComprador.setColorFilter(getResources().getColor(R.color.colorPrimary));
-        returnToParentActivity();
+    @OnClick(R.id.imageViewLocalizarFinca)
+    public void loadCoordenadas() {
+        edtLocalizacionFinca.setText("75.921231, -4.23132");
     }
 
     @Override
-    public void registerComprador() {
-
-    }
-
-    @Override
-    public void loadDialogoRegistroExitoso() {
-
+    @OnClick(R.id.btnRegistrarProductor)
+    public void registerProductor() {
+        //TODO Registrar productor
+        //TODO Show Progress
+        loadDialogoRegistroExitoso();
     }
 
     @Override
     public void loadInfo() {
-
-    }
-    //endregion
-
-    /*
-    //region On Click
-    @OnClick({R.id.ivBackButtonRegisterComprador, R.id.btnRegistrarComprador})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.ivBackButtonRegisterComprador:
-                returnToParentActivity();
-                break;
-            case R.id.btnRegistrarComprador:
-                loadDialogoRegistroExitoso();
-                //startActivity(new Intent(this, ProfileActivity.class));
-                break;
-            default:
-                break;
-        }
-    }
-
-    //endregion
-
-    //region Methods
-    private void loadInfo() {
-        //Spinner Interes Productos
-        String[] itemsInteresProductos = {"Aguacate", "Cacao", "Fríjol"};
-        List<String> interesProductosList = new ArrayList<>();
-        interesProductosList.addAll(Arrays.asList(itemsInteresProductos));
-        spinnerInteresProductos.setAdapter(null);
-        ArrayAdapter<String> interesProductosArrayAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, interesProductosList);
-        spinnerInteresProductos.setAdapter(interesProductosArrayAdapter);
-
+        //Spinner Método de Pago
         //Spinner Método de Pago
         String[] itemsMetodoPago = {"Transferencia Bancaria", "Efectivo", "Otros"};
         final List<String> metodoPagoList = new ArrayList<>();
@@ -169,18 +161,100 @@ public class RegisterCompradorActivity extends AppCompatActivity implements Regi
                 }
             }
         });
+
+        //Spinner Tipo Producto
+        String[] itemsTipoProducto = {"Aguacate", "Cacao", "Fríjol"};
+        final List<String> tipoProductoList = new ArrayList<>();
+        tipoProductoList.addAll(Arrays.asList(itemsTipoProducto));
+        spinnerTipoProducto.setAdapter(null);
+        ArrayAdapter<String> tipoProductoArrayAdapter =
+                new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, tipoProductoList);
+        spinnerTipoProducto.setAdapter(tipoProductoArrayAdapter);
     }
 
-    private void loadDialogoRegistroExitoso() {
+    @Override
+    public void loadMeses() {
+        YearMonthPickerDialog yearMonthPickerDialog = new YearMonthPickerDialog(this, new YearMonthPickerDialog.OnDateSetListener() {
+            @Override
+            public void onYearMonthSet(int year, int month) {
+                /*Locale locale = getResources().getConfiguration().locale;
+                Locale.setDefault(locale);*/
+                Locale spanish = new Locale("es", "ES");
+                Locale.setDefault(spanish);
+                Calendar calendar = Calendar.getInstance(spanish);
+                calendar.set(Calendar.YEAR, year);
+                //month = Integer.parseInt(calendar.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault()));
+                calendar.set(Calendar.MONTH, month);
+
+
+                SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy");
+
+                if (is_mes_cultivo) {
+                    edtMesSiembra.setText(dateFormat.format(calendar.getTime()));
+                } else {
+                    edtMesCosecha.setText(dateFormat.format(calendar.getTime()));
+                }
+            }
+        });
+
+        yearMonthPickerDialog.show();
+    }
+
+    @Override
+    public void loadDialogoRegistroExitoso() {
         View dialogo = View.inflate(this, R.layout.dialogo_registro_comprador, null);
+        TextView textViewMisCultivos = dialogo.findViewById(R.id.textViewBuscarProductos);
+        textViewMisCultivos.setText(getString(R.string.title_mis_cultivos));
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(dialogo);
         builder.show();
-
+        /*
+        LinearLayout linearLayoutMisCultivos = dialogo.findViewById(R.id.linearLayoutBuscarProductos);
+        linearLayoutMisCultivos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageView imageViewBuscarProductos = findViewById(R.id.imageViewBuscarProductos);
+                imageViewBuscarProductos.setColorFilter(getResources().getColor(R.color.colorPrimary));
+                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            }
+        });
+        LinearLayout linearLayoutMiCuenta = dialogo.findViewById(R.id.linearLayoutMiCuenta);
+        linearLayoutMiCuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ImageView imageViewMiCuenta = findViewById(R.id.imageViewMiCuenta);
+                imageViewMiCuenta.setColorFilter(getResources().getColor(R.color.colorPrimary));
+                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            }
+        }); */
     }
 
-  */
+    @Override
+    @OnClick(R.id.edtMesSiembra)
+    public void clickEdtMesSiembra() {
+        is_mes_cultivo = true;
+        loadMeses();
+    }
 
+    @Override
+    @OnClick(R.id.edtMesCosecha)
+    public void clickEdtMesCosecha() {
+        is_mes_cultivo = false;
+        loadMeses();
+    }
+
+    @Override
+    @OnClick(R.id.ivBackButtonRegisterProductor)
+    public void NavigateToParentActivity() {
+        ivBackButtonRegisterProductor.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        returnToParentActivity();
+    }
+
+    @Override
+    public void limpiarCambios() {
+        ivBackButtonRegisterProductor.setColorFilter(getResources().getColor(R.color.white));
+    }
+    //endregion
 
     //region Métodos Generales
     private void returnToParentActivity() {
@@ -213,14 +287,18 @@ public class RegisterCompradorActivity extends AppCompatActivity implements Regi
     }
     //endregion
 
-
-    //region Ciclo de Vida de Actividad
-
+    //region Ciclo de Vida Actividad
     @Override
     protected void onDestroy() {
         super.onDestroy();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        limpiarCambios();
+    }
     //endregion
+
 
 }

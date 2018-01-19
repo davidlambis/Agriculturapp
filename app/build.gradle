@@ -46,6 +46,9 @@ dependencies {
     //Month Year Picker
     implementation "com.github.twinkle942910:monthyearpicker:$rootProject.ext.monthYearPickerVersion"
 
+    //EventBus
+    implementation "org.greenrobot:eventbus:$rootProject.ext.greenRobotEventBusVersion"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'

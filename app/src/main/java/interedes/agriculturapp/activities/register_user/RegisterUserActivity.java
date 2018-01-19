@@ -18,8 +18,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
-import interedes.agriculturapp.activities.comprador.register_comprador.RegisterCompradorActivity;
-import interedes.agriculturapp.activities.productor.RegisterProductorActivity;
+import interedes.agriculturapp.activities.comprador.register_comprador.ui.RegisterCompradorActivity;
+import interedes.agriculturapp.activities.productor.register_productor.RegisterProductorActivity;
 
 public class RegisterUserActivity extends AppCompatActivity implements RegisterUserView {
 

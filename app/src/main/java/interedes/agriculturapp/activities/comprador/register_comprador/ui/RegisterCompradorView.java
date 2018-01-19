@@ -1,4 +1,4 @@
-package interedes.agriculturapp.activities.comprador.register_comprador;
+package interedes.agriculturapp.activities.comprador.register_comprador.ui;
 
 
 public interface RegisterCompradorView {
@@ -8,6 +8,8 @@ public interface RegisterCompradorView {
     void loadDialogoRegistroExitoso();
 
     void loadInfo();
+
+    void limpiarCambios();
 
     void registerComprador();
 }

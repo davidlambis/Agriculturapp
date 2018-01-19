@@ -47,4 +47,7 @@ ext {
 
     //Month Year Picker
     monthYearPickerVersion = '0.0.1'
+
+    //EventBus
+    greenRobotEventBusVersion = '3.1.1'
 }

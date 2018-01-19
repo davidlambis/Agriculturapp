@@ -33,7 +33,7 @@
             android:parentActivityName=".activities.home.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.comprador.register_comprador.RegisterCompradorActivity"
+            android:name=".activities.comprador.register_comprador.ui.RegisterCompradorActivity"
             android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
@@ -42,7 +42,7 @@
             android:name=".activities.profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.productor.RegisterProductorActivity"
+            android:name=".activities.productor.register_productor.RegisterProductorActivity"
             android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
