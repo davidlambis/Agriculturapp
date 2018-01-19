@@ -27,6 +27,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
+import interedes.agriculturapp.activities.profile.ProfileActivity;
 
 public class RegisterCompradorActivity extends AppCompatActivity implements RegisterCompradorView {
 
@@ -97,6 +98,30 @@ public class RegisterCompradorActivity extends AppCompatActivity implements Regi
         View dialogo = View.inflate(this, R.layout.dialogo_registro_comprador, null);
         TextView textViewMisCultivos = dialogo.findViewById(R.id.textViewBuscarProductos);
         textViewMisCultivos.setText(getString(R.string.title_buscar_productos));
+
+        final ImageView imageViewBuscarProductos = dialogo.findViewById(R.id.imageViewBuscarProductos);
+        imageViewBuscarProductos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageViewBuscarProductos.setColorFilter(getResources().getColor(R.color.colorPrimary));
+                Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+                i.putExtra("isCompradorOProductor", "comprador");
+                startActivity(i);
+            }
+        });
+
+        final ImageView imageViewMiCuenta = dialogo.findViewById(R.id.imageViewMiCuenta);
+        imageViewMiCuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageViewMiCuenta.setColorFilter(getResources().getColor(R.color.colorPrimary));
+                Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+                i.putExtra("isCompradorOProductor", "comprador");
+                startActivity(i);
+            }
+        });
+
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(dialogo);
         builder.show();

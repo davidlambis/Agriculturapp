@@ -38,15 +38,17 @@
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".activities.profile.ProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".activities.productor.register_productor.RegisterProductorActivity"
             android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".activities.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.comprador.MyAccountCompradorActivity"
             android:parentActivityName=".activities.profile.ProfileActivity"
@@ -59,6 +61,8 @@
             android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
             android:parentActivityName=".activities.profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <!--
         <activity
             android:name=".activities.comprador.DetalleProductoMercadoActivity"
             android:parentActivityName=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
@@ -75,7 +79,7 @@
         <activity android:name=".activities.productor.OfertasProductorActivity" />
         <activity android:name=".activities.productor.MisClientesProductorActivity" />
         <activity android:name=".activities.productor.AsistenciaTecnicaProductorActivity" />
-        <activity android:name=".activities.productor.PlagasProductorActivity"></activity>
+        <activity android:name=".activities.productor.PlagasProductorActivity" /> -->
     </application>
 
 </manifest>

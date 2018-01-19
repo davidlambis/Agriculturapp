@@ -36,6 +36,7 @@
                     android:src="@drawable/photo" />
 
                 <TextView
+                    android:id="@+id/nombreUsuario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -57,17 +58,20 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/linearLayoutMiCuenta"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/imageViewMiCuenta"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:background="@color/grey_900"
                         android:src="@drawable/ic_foto_profile" />
 
                     <TextView
+                        android:id="@+id/textViewMiCuenta"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
                         android:layout_gravity="start"
@@ -79,18 +83,21 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linearLayoutMercado"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="30dp"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/imageViewMercado"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:background="@color/grey_900"
                         android:src="@drawable/ic_carrito" />
 
                     <TextView
+                        android:id="@+id/textViewMercado"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
                         android:layout_gravity="start"
@@ -102,18 +109,21 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linearLayoutNotificaciones"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="30dp"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:id="@+id/imageViewNotificaciones"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:background="@color/grey_900"
                         android:src="@drawable/ic_notificacion" />
 
                     <TextView
+                        android:id="@+id/textViewNotificaciones"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
                         android:layout_gravity="start"
@@ -140,8 +150,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@+id/imageViewSalir"
                         android:layout_toEndOf="@+id/imageViewSalir"
+                        android:layout_toRightOf="@+id/imageViewSalir"
                         android:text="@string/title_exit"
                         android:textColor="@color/white"
                         android:textSize="16sp" />

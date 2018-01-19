@@ -202,12 +202,39 @@ public class RegisterProductorActivity extends AppCompatActivity implements Regi
 
     @Override
     public void loadDialogoRegistroExitoso() {
+
         View dialogo = View.inflate(this, R.layout.dialogo_registro_comprador, null);
         TextView textViewMisCultivos = dialogo.findViewById(R.id.textViewBuscarProductos);
         textViewMisCultivos.setText(getString(R.string.title_mis_cultivos));
+
+        final ImageView imageViewBuscarProductos = dialogo.findViewById(R.id.imageViewBuscarProductos);
+        imageViewBuscarProductos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageViewBuscarProductos.setColorFilter(getResources().getColor(R.color.colorPrimary));
+                Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+                i.putExtra("isCompradorOProductor", "productor");
+                startActivity(i);
+            }
+        });
+
+        final ImageView imageViewMiCuenta = dialogo.findViewById(R.id.imageViewMiCuenta);
+        imageViewMiCuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageViewMiCuenta.setColorFilter(getResources().getColor(R.color.colorPrimary));
+                Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+                i.putExtra("isCompradorOProductor", "productor");
+                startActivity(i);
+            }
+        });
+
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(dialogo);
         builder.show();
+
+
         /*
         LinearLayout linearLayoutMisCultivos = dialogo.findViewById(R.id.linearLayoutBuscarProductos);
         linearLayoutMisCultivos.setOnClickListener(new View.OnClickListener() {
