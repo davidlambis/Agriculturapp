@@ -57,28 +57,28 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterU
     @Override
     @OnClick(R.id.linearLayoutProductor)
     public void navigateToRegistrarProductor() {
+        progressBar.setVisibility(View.VISIBLE);
         imageViewProductor.setColorFilter(getResources().getColor(R.color.colorPrimary));
-        showProgress();
         startActivity(new Intent(this, RegisterProductorActivity.class));
-        hideProgress();
+        progressBar.setVisibility(View.GONE);
     }
 
     @Override
     @OnClick(R.id.linearLayoutComprador)
     public void navigateToRegistrarComprador() {
+        progressBar.setVisibility(View.VISIBLE);
         imageViewComprador.setColorFilter(getResources().getColor(R.color.colorPrimary));
-        showProgress();
         startActivity(new Intent(this, RegisterCompradorActivity.class));
-        hideProgress();
+        progressBar.setVisibility(View.GONE);
     }
 
     @Override
     @OnClick(R.id.linearLayoutAyudaRegistro)
     public void navigateToAyudaRegistro() {
+        progressBar.setVisibility(View.VISIBLE);
         textViewAyudaRegistro.setTextColor(getResources().getColor(R.color.colorPrimary));
-        showProgress();
         Snackbar.make(container, "Go to Ayuda Registro", Snackbar.LENGTH_SHORT).show();
-        hideProgress();
+        progressBar.setVisibility(View.GONE);
     }
 
     @Override
@@ -88,15 +88,6 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterU
         returnToParentActivity();
     }
 
-    @Override
-    public void showProgress() {
-        progressBar.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void hideProgress() {
-        progressBar.setVisibility(View.GONE);
-    }
 
     @Override
     public void limpiarCambios() {

@@ -38,48 +38,26 @@
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
-
         <activity
             android:name=".activities.productor.register_productor.RegisterProductorActivity"
             android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
-
         <activity
             android:name=".activities.profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.comprador.MyAccountCompradorActivity"
+            android:name=".activities.productor.my_account_productor.MyAccountProductorActivity"
             android:parentActivityName=".activities.profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.productor.MyAccountProductorActivity"
+            android:name=".activities.comprador.my_account_comprador.MyAccountCompradorActivity"
             android:parentActivityName=".activities.profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
-            android:parentActivityName=".activities.profile.ProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <!--
-        <activity
-            android:name=".activities.comprador.DetalleProductoMercadoActivity"
-            android:parentActivityName=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activities.comprador.DetalleOfertarMercadoActivity"
-            android:configChanges="screenSize|orientation"
-            android:parentActivityName=".activities.comprador.DetalleProductoMercadoActivity"
-            android:theme="@style/LoginTheme"
-            android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activities.productor.MisVentasProductorActivity" />
-        <activity android:name=".activities.productor.MisCultivosProductorActivity" />
-        <activity android:name=".activities.productor.PreguntasProductorActivity" />
-        <activity android:name=".activities.productor.OfertasProductorActivity" />
-        <activity android:name=".activities.productor.MisClientesProductorActivity" />
-        <activity android:name=".activities.productor.AsistenciaTecnicaProductorActivity" />
-        <activity android:name=".activities.productor.PlagasProductorActivity" /> -->
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

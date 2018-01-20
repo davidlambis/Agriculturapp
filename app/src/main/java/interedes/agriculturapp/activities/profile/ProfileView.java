@@ -1,5 +1,6 @@
 package interedes.agriculturapp.activities.profile;
 
+
 public interface ProfileView {
 
     void isCompradorOProductor();

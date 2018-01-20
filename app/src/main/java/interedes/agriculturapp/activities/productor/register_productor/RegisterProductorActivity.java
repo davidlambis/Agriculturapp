@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog;
@@ -234,26 +233,6 @@ public class RegisterProductorActivity extends AppCompatActivity implements Regi
         builder.setView(dialogo);
         builder.show();
 
-
-        /*
-        LinearLayout linearLayoutMisCultivos = dialogo.findViewById(R.id.linearLayoutBuscarProductos);
-        linearLayoutMisCultivos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ImageView imageViewBuscarProductos = findViewById(R.id.imageViewBuscarProductos);
-                imageViewBuscarProductos.setColorFilter(getResources().getColor(R.color.colorPrimary));
-                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
-            }
-        });
-        LinearLayout linearLayoutMiCuenta = dialogo.findViewById(R.id.linearLayoutMiCuenta);
-        linearLayoutMiCuenta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ImageView imageViewMiCuenta = findViewById(R.id.imageViewMiCuenta);
-                imageViewMiCuenta.setColorFilter(getResources().getColor(R.color.colorPrimary));
-                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
-            }
-        }); */
     }
 
     @Override

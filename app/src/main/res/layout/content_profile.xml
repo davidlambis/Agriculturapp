@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/fondo_profile_comprador"
-        tools:ignore="ContentDescription"></ImageView>
+        tools:ignore="ContentDescription" />
 
     <ScrollView
         android:layout_width="match_parent"

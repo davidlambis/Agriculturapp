@@ -73,18 +73,15 @@
                     android:textSize="18sp" />
             </RelativeLayout>
 
-            <view
-                style="@style/divider"
-                android:layout_marginTop="@dimen/margin_36" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/title_productos_interes_comprador"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
-            <view style="@style/divider" />
 
             <include layout="@layout/content_recyclerview" />
 

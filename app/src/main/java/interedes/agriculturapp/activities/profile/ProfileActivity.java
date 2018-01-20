@@ -15,9 +15,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 import interedes.agriculturapp.R;
-import interedes.agriculturapp.activities.comprador.MyAccountCompradorActivity;
 import interedes.agriculturapp.activities.comprador.mercado_comprador.MercadoCompradorActivity;
-import interedes.agriculturapp.activities.productor.MyAccountProductorActivity;
+import interedes.agriculturapp.activities.comprador.my_account_comprador.MyAccountCompradorActivity;
+import interedes.agriculturapp.activities.productor.my_account_productor.MyAccountProductorActivity;
 
 public class ProfileActivity extends AppCompatActivity implements ProfileView {
 
@@ -56,8 +56,7 @@ public class ProfileActivity extends AppCompatActivity implements ProfileView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
-
-       // isCompradorOProductor();
+        isCompradorOProductor();
     }
 
 
@@ -76,7 +75,6 @@ public class ProfileActivity extends AppCompatActivity implements ProfileView {
     @Override
     @OnClick(R.id.linearLayoutMiCuenta)
     public void navigateToMiCuenta() {
-        /*
         textViewMiCuenta.setTextColor(getResources().getColor(R.color.colorPrimary));
         imageViewMiCuenta.setColorFilter(getResources().getColor(R.color.colorPrimary));
         if (isCompradorOProductor.equals("productor")) {
@@ -85,9 +83,7 @@ public class ProfileActivity extends AppCompatActivity implements ProfileView {
         } else if (isCompradorOProductor.equals("comprador")) {
             Intent i = new Intent(this, MyAccountCompradorActivity.class);
             startActivity(i);
-        }*/
-        Intent i = new Intent(this, MyAccountCompradorActivity.class);
-        startActivity(i);
+        }
     }
 
     @Override
@@ -104,7 +100,7 @@ public class ProfileActivity extends AppCompatActivity implements ProfileView {
     @Override
     @OnClick(R.id.linearLayoutNotificaciones)
     public void navigateToNotificaciones() {
-        //TODO
+
     }
 
     @Override
