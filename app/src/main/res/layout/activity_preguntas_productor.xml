@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="interedes.agriculturapp.activities.productor.PreguntasProductorActivity">
+    tools:context=".activities.productor.mis_preguntas_productor.MisPreguntasProductorActivity">
 
     <include layout="@layout/content_preguntas_productor"></include>
 

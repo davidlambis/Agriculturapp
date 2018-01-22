@@ -16,6 +16,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
+import interedes.agriculturapp.activities.productor.mis_clientes_productor.MisClientesProductorActivity;
+import interedes.agriculturapp.activities.productor.mis_cultivos_productor.MisCultivosProductorActivity;
+import interedes.agriculturapp.activities.productor.mis_ofertas_productor.MisOfertasProductorActivity;
+import interedes.agriculturapp.activities.productor.mis_preguntas_productor.MisPreguntasProductorActivity;
+import interedes.agriculturapp.activities.productor.mis_ventas_productor.MisVentasProductorActivity;
 
 public class MyAccountProductorActivity extends AppCompatActivity implements MyAccountProductorView {
 
@@ -116,37 +121,58 @@ public class MyAccountProductorActivity extends AppCompatActivity implements MyA
     @Override
     @OnClick(R.id.imageViewBackButton)
     public void navigateToParentActivity() {
+        imageViewBackButton.setColorFilter(getResources().getColor(R.color.colorPrimary));
         returnToParentActivity();
     }
 
     @Override
     public void navigateToAgregarProducto() {
-
+        //TODO
     }
 
     @Override
+    @OnClick(R.id.linearLayoutMisCultivos)
     public void navigateToMisCultivos() {
-
+        imageViewCultivos.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        textViewCultivos.setTextColor(getResources().getColor(R.color.colorPrimary));
+        Intent i = new Intent(this, MisCultivosProductorActivity.class);
+        startActivity(i);
     }
 
     @Override
+    @OnClick(R.id.linearLayoutPreguntas)
     public void navigateToPreguntas() {
-
+        imageViewPreguntas.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        textViewPreguntas.setTextColor(getResources().getColor(R.color.colorPrimary));
+        Intent i = new Intent(this, MisPreguntasProductorActivity.class);
+        startActivity(i);
     }
 
     @Override
+    @OnClick(R.id.linearLayoutOfertas)
     public void navigateToOfertas() {
-
+        imageViewOfertas.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        textViewOfertas.setTextColor(getResources().getColor(R.color.colorPrimary));
+        Intent i = new Intent(this, MisOfertasProductorActivity.class);
+        startActivity(i);
     }
 
     @Override
+    @OnClick(R.id.linearLayoutVentasRealizadas)
     public void navigateToVentas() {
-
+        imageViewVentas.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        textViewVentas.setTextColor(getResources().getColor(R.color.colorPrimary));
+        Intent i = new Intent(this, MisVentasProductorActivity.class);
+        startActivity(i);
     }
 
     @Override
+    @OnClick(R.id.linearLayoutClientes)
     public void navigateToClientes() {
-
+        imageViewClientes.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        textViewClientes.setTextColor(getResources().getColor(R.color.colorPrimary));
+        Intent i = new Intent(this, MisClientesProductorActivity.class);
+        startActivity(i);
     }
 
     @Override
@@ -186,7 +212,17 @@ public class MyAccountProductorActivity extends AppCompatActivity implements MyA
 
     @Override
     public void limpiarCambios() {
-
+        imageViewBackButton.setColorFilter(getResources().getColor(R.color.white));
+        imageViewVentas.setColorFilter(getResources().getColor(R.color.white));
+        textViewVentas.setTextColor(getResources().getColor(R.color.white));
+        imageViewCultivos.setColorFilter(getResources().getColor(R.color.white));
+        textViewCultivos.setTextColor(getResources().getColor(R.color.white));
+        imageViewPreguntas.setColorFilter(getResources().getColor(R.color.white));
+        textViewPreguntas.setTextColor(getResources().getColor(R.color.white));
+        imageViewOfertas.setColorFilter(getResources().getColor(R.color.white));
+        textViewOfertas.setTextColor(getResources().getColor(R.color.white));
+        imageViewClientes.setColorFilter(getResources().getColor(R.color.white));
+        textViewClientes.setTextColor(getResources().getColor(R.color.white));
     }
     //endregion
 
@@ -218,6 +254,21 @@ public class MyAccountProductorActivity extends AppCompatActivity implements MyA
             // Terminar con el método correspondiente para Android 5.x
             onBackPressed();
         }
+    }
+
+    //endregion
+
+    //region Ciclo de Vida Actividad
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        limpiarCambios();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     //endregion

@@ -63,19 +63,12 @@
             </RelativeLayout>
 
 
-            <view
-                style="@style/divider"
-                android:layout_marginTop="@dimen/margin_global" />
-
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/title_filtrar_busqueda"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
-
-            <view style="@style/divider" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"

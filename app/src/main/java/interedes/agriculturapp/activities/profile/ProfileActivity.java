@@ -100,7 +100,7 @@ public class ProfileActivity extends AppCompatActivity implements ProfileView {
     @Override
     @OnClick(R.id.linearLayoutNotificaciones)
     public void navigateToNotificaciones() {
-
+        
     }
 
     @Override
