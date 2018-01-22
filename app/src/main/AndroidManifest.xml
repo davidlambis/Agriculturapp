@@ -79,6 +79,10 @@
             android:name=".activities.productor.mis_clientes_productor.MisClientesProductorActivity"
             android:parentActivityName=".activities.productor.my_account_productor.MyAccountProductorActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.productor.asistencia_tecnica_productor.AsistenciaTecnicaProductorActivity"
+            android:parentActivityName=".activities.productor.my_account_productor.MyAccountProductorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

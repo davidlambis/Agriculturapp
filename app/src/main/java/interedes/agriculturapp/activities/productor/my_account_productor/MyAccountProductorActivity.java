@@ -16,6 +16,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
+import interedes.agriculturapp.activities.productor.asistencia_tecnica_productor.AsistenciaTecnicaProductorActivity;
 import interedes.agriculturapp.activities.productor.mis_clientes_productor.MisClientesProductorActivity;
 import interedes.agriculturapp.activities.productor.mis_cultivos_productor.MisCultivosProductorActivity;
 import interedes.agriculturapp.activities.productor.mis_ofertas_productor.MisOfertasProductorActivity;
@@ -176,8 +177,12 @@ public class MyAccountProductorActivity extends AppCompatActivity implements MyA
     }
 
     @Override
+    @OnClick(R.id.linearLayoutPlagas)
     public void navigateToPlagas() {
-
+        imageViewPlagas.setColorFilter(getResources().getColor(R.color.colorPrimary));
+        textViewPlagas.setTextColor(getResources().getColor(R.color.colorPrimary));
+        Intent i = new Intent(this, AsistenciaTecnicaProductorActivity.class);
+        startActivity(i);
     }
 
     @Override
@@ -223,6 +228,8 @@ public class MyAccountProductorActivity extends AppCompatActivity implements MyA
         textViewOfertas.setTextColor(getResources().getColor(R.color.white));
         imageViewClientes.setColorFilter(getResources().getColor(R.color.white));
         textViewClientes.setTextColor(getResources().getColor(R.color.white));
+        imageViewPlagas.setColorFilter(getResources().getColor(R.color.white));
+        textViewPlagas.setTextColor(getResources().getColor(R.color.white));
     }
     //endregion
 
