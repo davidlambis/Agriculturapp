@@ -57,6 +57,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
+            android:parentActivityName=".activities.comprador.my_account_comprador.MyAccountCompradorActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.productor.mis_ventas_productor.MisVentasProductorActivity"
