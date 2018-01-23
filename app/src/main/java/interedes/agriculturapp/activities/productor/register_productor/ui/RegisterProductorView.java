@@ -1,4 +1,4 @@
-package interedes.agriculturapp.activities.productor.register_productor;
+package interedes.agriculturapp.activities.productor.register_productor.ui;
 
 public interface RegisterProductorView {
 
@@ -19,4 +19,8 @@ public interface RegisterProductorView {
     void NavigateToParentActivity();
 
     void registerProductor();
+
+    void disableInputs();
+
+    void enableInputs();
 }

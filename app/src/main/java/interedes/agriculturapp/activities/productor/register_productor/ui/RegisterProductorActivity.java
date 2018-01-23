@@ -1,5 +1,6 @@
-package interedes.agriculturapp.activities.productor.register_productor;
+package interedes.agriculturapp.activities.productor.register_productor.ui;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -94,12 +96,14 @@ public class RegisterProductorActivity extends AppCompatActivity implements Regi
     @Override
     @OnClick(R.id.imageViewLocalizarFinca)
     public void loadCoordenadas() {
+        //Presenter
         edtLocalizacionFinca.setText("75.921231, -4.23132");
     }
 
     @Override
     @OnClick(R.id.btnRegistrarProductor)
     public void registerProductor() {
+        //Presenter
         //TODO Registrar productor
         //TODO Show Progress
         loadDialogoRegistroExitoso();
@@ -107,7 +111,7 @@ public class RegisterProductorActivity extends AppCompatActivity implements Regi
 
     @Override
     public void loadInfo() {
-        //Spinner Método de Pago
+        //Presenter
         //Spinner Método de Pago
         String[] itemsMetodoPago = {"Transferencia Bancaria", "Efectivo", "Otros"};
         final List<String> metodoPagoList = new ArrayList<>();
@@ -229,9 +233,19 @@ public class RegisterProductorActivity extends AppCompatActivity implements Regi
         });
 
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
         builder.setView(dialogo);
+        //builder.setCancelable(false);
+        builder.setOnKeyListener(new DialogInterface.OnKeyListener() {
+            @Override
+            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                // Prevent dialog close on back press button
+                return keyCode == KeyEvent.KEYCODE_BACK;
+            }
+        });
         builder.show();
+
+
 
     }
 
@@ -259,6 +273,16 @@ public class RegisterProductorActivity extends AppCompatActivity implements Regi
     @Override
     public void limpiarCambios() {
         ivBackButtonRegisterProductor.setColorFilter(getResources().getColor(R.color.white));
+    }
+
+    @Override
+    public void disableInputs() {
+
+    }
+
+    @Override
+    public void enableInputs() {
+
     }
     //endregion
 
@@ -304,6 +328,8 @@ public class RegisterProductorActivity extends AppCompatActivity implements Regi
         super.onResume();
         limpiarCambios();
     }
+
+
     //endregion
 
 

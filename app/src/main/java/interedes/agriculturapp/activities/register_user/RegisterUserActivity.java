@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import interedes.agriculturapp.R;
 import interedes.agriculturapp.activities.comprador.register_comprador.ui.RegisterCompradorActivity;
-import interedes.agriculturapp.activities.productor.register_productor.RegisterProductorActivity;
+import interedes.agriculturapp.activities.productor.register_productor.ui.RegisterProductorActivity;
 
 public class RegisterUserActivity extends AppCompatActivity implements RegisterUserView {
 
@@ -57,28 +57,25 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterU
     @Override
     @OnClick(R.id.linearLayoutProductor)
     public void navigateToRegistrarProductor() {
-        progressBar.setVisibility(View.VISIBLE);
+        showProgress();
         imageViewProductor.setColorFilter(getResources().getColor(R.color.colorPrimary));
         startActivity(new Intent(this, RegisterProductorActivity.class));
-        progressBar.setVisibility(View.GONE);
     }
 
     @Override
     @OnClick(R.id.linearLayoutComprador)
     public void navigateToRegistrarComprador() {
-        progressBar.setVisibility(View.VISIBLE);
+        showProgress();
         imageViewComprador.setColorFilter(getResources().getColor(R.color.colorPrimary));
         startActivity(new Intent(this, RegisterCompradorActivity.class));
-        progressBar.setVisibility(View.GONE);
     }
 
     @Override
     @OnClick(R.id.linearLayoutAyudaRegistro)
     public void navigateToAyudaRegistro() {
-        progressBar.setVisibility(View.VISIBLE);
+        showProgress();
         textViewAyudaRegistro.setTextColor(getResources().getColor(R.color.colorPrimary));
         Snackbar.make(container, "Go to Ayuda Registro", Snackbar.LENGTH_SHORT).show();
-        progressBar.setVisibility(View.GONE);
     }
 
     @Override
@@ -91,10 +88,21 @@ public class RegisterUserActivity extends AppCompatActivity implements RegisterU
 
     @Override
     public void limpiarCambios() {
+        hideProgress();
         imageViewProductor.setColorFilter(getResources().getColor(R.color.white));
         imageViewComprador.setColorFilter(getResources().getColor(R.color.white));
         textViewAyudaRegistro.setTextColor(getResources().getColor(R.color.white));
         imageViewBackButton.setColorFilter(getResources().getColor(R.color.white));
+    }
+
+    @Override
+    public void showProgress() {
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgress() {
+        progressBar.setVisibility(View.GONE);
     }
 
     //endregion

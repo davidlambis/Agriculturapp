@@ -39,7 +39,7 @@
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".activities.productor.register_productor.RegisterProductorActivity"
+            android:name=".activities.productor.register_productor.ui.RegisterProductorActivity"
             android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"

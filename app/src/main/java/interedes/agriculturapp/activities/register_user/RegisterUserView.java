@@ -12,5 +12,8 @@ public interface RegisterUserView {
 
     void limpiarCambios();
 
+    void showProgress();
+
+    void hideProgress();
 
 }

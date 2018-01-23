@@ -5,7 +5,6 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".activities.register_user.RegisterUserActivity">
 
     <ImageView
@@ -17,6 +16,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
+       android:fillViewport="true"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_global">
 
@@ -50,7 +50,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -84,6 +84,7 @@
                     android:id="@+id/linearLayoutComprador"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
                     android:layout_margin="@dimen/margin_global"
                     android:orientation="vertical">
 
@@ -110,26 +111,25 @@
             <ProgressBar
                 android:id="@+id/progressBar"
                 style="?android:attr/progressBarStyleLarge"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:indeterminate="true"
                 android:indeterminateTint="@color/colorPrimary"
                 android:indeterminateTintMode="src_atop"
                 android:visibility="gone" />
 
+
             <LinearLayout
                 android:id="@+id/linearLayoutAyudaRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="135dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textViewAyudaRegistro"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:gravity="center|bottom"
                     android:text="@string/title_help_register"
                     android:textColor="@color/white"
                     android:textSize="18sp"
