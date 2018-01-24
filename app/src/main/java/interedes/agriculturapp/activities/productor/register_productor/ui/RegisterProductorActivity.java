@@ -78,6 +78,12 @@ public class RegisterProductorActivity extends AppCompatActivity implements Regi
     Button btnRegistrarProductor;
     @BindView(R.id.container)
     FrameLayout container;
+    @BindView(R.id.edtCantidadPrimera)
+    EditText edtCantidadPrimera;
+    @BindView(R.id.edtCantidadSegunda)
+    EditText edtCantidadSegunda;
+    @BindView(R.id.edtCantidadTercera)
+    EditText edtCantidadTercera;
 
     //Variables globales
     private boolean is_mes_cultivo;
@@ -244,7 +250,6 @@ public class RegisterProductorActivity extends AppCompatActivity implements Regi
             }
         });
         builder.show();
-
 
 
     }

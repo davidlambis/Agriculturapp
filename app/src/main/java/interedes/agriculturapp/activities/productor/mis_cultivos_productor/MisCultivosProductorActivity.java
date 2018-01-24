@@ -15,11 +15,15 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog;
 import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -87,6 +91,38 @@ public class MisCultivosProductorActivity extends AppCompatActivity implements M
     public void navigateToParentActivity() {
         imageViewBackButton.setColorFilter(getResources().getColor(R.color.colorPrimary));
         returnToParentActivity();
+    }
+
+    @Override
+    @OnClick(R.id.edtMesCosecha)
+    public void clickEdtMesCosecha() {
+        loadMeses();
+    }
+
+    @Override
+    public void loadMeses() {
+        YearMonthPickerDialog yearMonthPickerDialog = new YearMonthPickerDialog(this, new YearMonthPickerDialog.OnDateSetListener() {
+            @Override
+            public void onYearMonthSet(int year, int month) {
+                /*Locale locale = getResources().getConfiguration().locale;
+                Locale.setDefault(locale);*/
+                Locale spanish = new Locale("es", "ES");
+                Locale.setDefault(spanish);
+                Calendar calendar = Calendar.getInstance(spanish);
+                calendar.set(Calendar.YEAR, year);
+                //month = Integer.parseInt(calendar.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault()));
+                calendar.set(Calendar.MONTH, month);
+
+
+                SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy");
+
+
+                edtMesCosecha.setText(dateFormat.format(calendar.getTime()));
+
+            }
+        });
+
+        yearMonthPickerDialog.show();
     }
     //endregion
 

@@ -28,7 +28,7 @@
                 android:layout_height="25dp"
                 android:layout_gravity="start"
                 android:background="@color/grey_900"
-                android:text="@string/title_productor_ventas"
+                android:text="@string/title_productor_cultivos"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -63,12 +63,36 @@
             </RelativeLayout>
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/title_filtrar_busqueda"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:text="@string/title_filtrar_busqueda"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fabLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_global"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_search"
+                    android:theme="@style/FloatingButton"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabSize="normal"
+                    app:rippleColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"

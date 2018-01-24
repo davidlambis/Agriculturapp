@@ -76,6 +76,7 @@
 
     <!-- VENTAS PRODUCTOR -->
     <string name="title_productor_ventas">Productor-Ventas</string>
+    <string name="title_productor_cultivos">Productor-Cultivos</string>
     <string name="title_mis_ventas">Mis Ventas</string>
     <string name="title_destino">Destino</string>
     <string name="title_fecha_compra">Fecha de Compra:</string>
@@ -137,6 +138,9 @@
     <string name="edit_text_numero_hectareas">Número de Hectáreas</string>
     <string name="edit_text_mes_siembra">Mes de Siembra</string>
     <string name="edit_text_mes_cosecha">Mes de Cosecha</string>
+    <string name="title_cantidad_calidad">Cantidad por Calidad del producto</string>
+    <string name="title_cantidad_registrar_productor">Cantidad:</string>
+    <string name="edit_text_cantidad_kg">Cantidad(Kg)</string>
 
     <!-- MI CUENTA PRODUCTOR-->
     <string name="btn_agregar_producto">Agregar Producto</string>

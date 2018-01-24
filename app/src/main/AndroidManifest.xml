@@ -62,11 +62,11 @@
         <activity
             android:name=".activities.productor.mis_ventas_productor.MisVentasProductorActivity"
             android:parentActivityName=".activities.productor.my_account_productor.MyAccountProductorActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/LoginTheme" />
         <activity
             android:name=".activities.productor.mis_cultivos_productor.MisCultivosProductorActivity"
             android:parentActivityName=".activities.productor.my_account_productor.MyAccountProductorActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/LoginTheme" />
         <activity
             android:name=".activities.productor.mis_preguntas_productor.MisPreguntasProductorActivity"
             android:parentActivityName=".activities.productor.my_account_productor.MyAccountProductorActivity"

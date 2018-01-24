@@ -9,4 +9,8 @@ public interface MisCultivosProductorView {
 
     void limpiarCambios();
 
+    void loadMeses();
+
+    void clickEdtMesCosecha();
+
 }
