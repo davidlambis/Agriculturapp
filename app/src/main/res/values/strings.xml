@@ -116,8 +116,10 @@
 
     <!-- DETALLE PLAGA -->
     <string name="title_plaga_con_numero">%1$s - Plaga %2$d</string>
-    <string name="title_agroinsumos_pesticidas">AgroInsumos y Pesticidas</string>
 
+    <!-- AGROINSUMOS PRODUCTOR -->
+    <string name="title_agroinsumos_pesticidas">Agroinsumos y Pesticidas</string>
+    <string name="title_agroinsumos">Agroinsumos</string>
 
     <!-- DETALLE OFERTAR MERCADO-->
     <string name="title_hacer_oferta">¡Haz tu oferta!</string>
