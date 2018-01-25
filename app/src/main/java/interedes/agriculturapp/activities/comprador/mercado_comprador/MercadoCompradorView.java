@@ -6,4 +6,8 @@ public interface MercadoCompradorView {
     void navigateToParentActivity();
 
     void limpiarCambios();
+
+    void initAdapter();
+
+    void initRecyclerView();
 }

@@ -20,6 +20,7 @@ import interedes.agriculturapp.R;
 
 public class MercadoCompradorActivity extends AppCompatActivity implements MercadoCompradorView {
 
+    //UI Elements
     @BindView(R.id.imageViewBackButton)
     ImageView imageViewBackButton;
     @BindView(R.id.textView)
@@ -35,11 +36,15 @@ public class MercadoCompradorActivity extends AppCompatActivity implements Merca
     @BindView(R.id.container)
     FrameLayout container;
 
+    //Variables Globales
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mercado_comprador);
         ButterKnife.bind(this);
+        initAdapter();
+        initRecyclerView();
     }
 
     //region Métodos Interfaz
@@ -53,6 +58,15 @@ public class MercadoCompradorActivity extends AppCompatActivity implements Merca
     @Override
     public void limpiarCambios() {
         imageViewBackButton.setColorFilter(getResources().getColor(R.color.white));
+    }
+
+    @Override
+    public void initAdapter() {
+    }
+
+    @Override
+    public void initRecyclerView() {
+
     }
     //endregion
 

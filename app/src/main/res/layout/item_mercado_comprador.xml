@@ -17,6 +17,7 @@
         android:padding="@dimen/margin_global">
 
         <ImageView
+            android:id="@+id/imageViewItemProducto"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
@@ -24,11 +25,11 @@
             android:src="@drawable/photo" />
 
         <TextView
+            android:id="@+id/textViewItemProducto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:text="Prueba RecyclerView"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold" />
