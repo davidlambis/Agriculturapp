@@ -12,7 +12,6 @@
     <!-- LOGIN-->
     <string name="edit_text_cedula">Número de Cédula</string>
     <string name="edit_text_contrasena">Contraseña</string>
-    <string name="text_registrarse"><u>Regístrate</u></string>
 
     <!--STRING ACTIVITY REGISTER USER-->
     <string name="title_productor">Productor</string>
